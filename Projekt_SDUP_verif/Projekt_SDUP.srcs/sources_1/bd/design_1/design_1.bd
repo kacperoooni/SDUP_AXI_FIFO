@@ -1,0 +1,124 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6A4A8B19DD7EBFFF",
+      "device": "xc7z020clg484-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "axi4stream_vip_0": "",
+      "axi4stream_vip_1": "",
+      "AXI_FIFO_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "200000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "axi4stream_vip_0": {
+        "vlnv": "xilinx.com:ip:axi4stream_vip:1.1",
+        "xci_name": "design_1_axi4stream_vip_0_0",
+        "parameters": {
+          "HAS_ARESETN": {
+            "value": "0"
+          },
+          "HAS_TKEEP": {
+            "value": "0"
+          },
+          "HAS_TLAST": {
+            "value": "0"
+          },
+          "HAS_TREADY": {
+            "value": "1"
+          },
+          "HAS_TSTRB": {
+            "value": "0"
+          },
+          "INTERFACE_MODE": {
+            "value": "MASTER"
+          },
+          "TDATA_NUM_BYTES": {
+            "value": "2"
+          },
+          "TDEST_WIDTH": {
+            "value": "0"
+          },
+          "TID_WIDTH": {
+            "value": "0"
+          },
+          "TUSER_WIDTH": {
+            "value": "0"
+          }
+        }
+      },
+      "axi4stream_vip_1": {
+        "vlnv": "xilinx.com:ip:axi4stream_vip:1.1",
+        "xci_name": "design_1_axi4stream_vip_1_1",
+        "parameters": {
+          "HAS_ARESETN": {
+            "value": "0"
+          },
+          "INTERFACE_MODE": {
+            "value": "SLAVE"
+          }
+        }
+      },
+      "AXI_FIFO_0": {
+        "vlnv": "xilinx.com:user:AXI_FIFO:1.0",
+        "xci_name": "design_1_AXI_FIFO_0_0"
+      }
+    },
+    "interface_nets": {
+      "AXI_FIFO_0_oAXI": {
+        "interface_ports": [
+          "AXI_FIFO_0/oAXI",
+          "axi4stream_vip_1/S_AXIS"
+        ]
+      },
+      "axi4stream_vip_0_M_AXIS": {
+        "interface_ports": [
+          "axi4stream_vip_0/M_AXIS",
+          "AXI_FIFO_0/iAXI"
+        ]
+      }
+    },
+    "nets": {
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk",
+          "axi4stream_vip_0/aclk",
+          "AXI_FIFO_0/aclk",
+          "AXI_FIFO_0/iAXI_aclk"
+        ]
+      },
+      "AXI_FIFO_0_oAXI_aclk": {
+        "ports": [
+          "AXI_FIFO_0/oAXI_aclk",
+          "axi4stream_vip_1/aclk"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+04:34:45 **** Incremental Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]
+
+04:34:47 Build Finished (took 1s.778ms)
+

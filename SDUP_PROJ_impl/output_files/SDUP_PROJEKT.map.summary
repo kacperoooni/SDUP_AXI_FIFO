@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jun 21 20:49:47 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : SDUP_PROJEKT
+Top-level Entity Name : pd1
+Family : Cyclone IV E
+Total logic elements : 3,891
+    Total combinational functions : 2,600
+    Dedicated logic registers : 2,769
+Total registers : 2769
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 168,576
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

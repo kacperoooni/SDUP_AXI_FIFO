@@ -1,0 +1,80 @@
+23:42:27 **** Incremental Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Id:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//HAL/inc -Id:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/ -Id:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:172:6: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  172 |      usleep(500000);
+      |      ^~~~~~
+Info: Linking nios2_soft.elf
+nios2-elf-g++.exe  -T'd:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//linker.x' -msys-crt0='d:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Ld:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/  -msmallc  -Wl,-Map=nios2_soft.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios2_soft.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert.exe nios2_soft.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name pd1 --quartus_project_dir "d:/intelFPGA_lite/SDUP_PROJ" --jdi ../..//output_files/SDUP_PROJEKT.jdi --sopcinfo D:/intelFPGA_lite/SDUP_PROJ/pd1.sopcinfo
+Info: (nios2_soft.elf) 2444 Bytes program size (code + initialized data).
+Info:                  13 KBytes free for stack + heap.
+Info: Creating nios2_soft.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios2_soft.elf >nios2_soft.objdump
+[nios2_soft build complete]
+23:42:39 **** Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]
+23:42:42 **** Incremental Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]
+23:43:32 **** Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]
+23:43:34 **** Incremental Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]
+23:44:33 **** Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]
+23:44:37 **** Incremental Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]
+04:34:23 **** Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Id:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//HAL/inc -Id:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/ -Id:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o "obj/default/hello_world_small.o" "hello_world_small.c"
+hello_world_small.c: In function 'main':
+hello_world_small.c:145:6: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  145 |      usleep(500000);
+      |      ^~~~~~
+Info: Linking nios2_soft.elf
+nios2-elf-g++.exe  -T'd:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//linker.x' -msys-crt0='d:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Ld:/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/  -msmallc  -Wl,-Map=nios2_soft.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o nios2_soft.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert.exe nios2_soft.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name pd1 --quartus_project_dir "d:/intelFPGA_lite/SDUP_PROJ" --jdi ../..//output_files/SDUP_PROJEKT.jdi --sopcinfo D:/intelFPGA_lite/SDUP_PROJ/pd1.sopcinfo
+Info: (nios2_soft.elf) 2444 Bytes program size (code + initialized data).
+Info:                  13 KBytes free for stack + heap.
+Info: Creating nios2_soft.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source nios2_soft.elf >nios2_soft.objdump
+[nios2_soft build complete]
+04:34:45 **** Incremental Build of configuration Nios II for project nios2_soft ****
+wsl make all 
+Info: Building /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+make --no-print-directory -C /mnt/d/intelFPGA_lite/SDUP_PROJ/software/nios2_soft_bsp/
+[BSP build complete]
+[nios2_soft build complete]

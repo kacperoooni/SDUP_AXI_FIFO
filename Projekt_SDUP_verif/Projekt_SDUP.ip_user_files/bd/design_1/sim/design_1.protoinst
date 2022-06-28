@@ -1,0 +1,46 @@
+{
+	"version": "1.0",
+	"modules": {
+		"design_1": {
+			"proto_instances": {
+				"/AXI_FIFO_0/iAXI": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "iAXI_aclk"},
+						"TDATA": { "actual": "iAXI_data"},
+						"TREADY": { "actual": "iAXI_ready"},
+						"TUSER": { "actual": "iAXI_tuser"},
+						"TVALID": { "actual": "iAXI_valid"}
+					}
+				},
+				"/AXI_FIFO_0/oAXI": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "oAXI_aclk"},
+						"TDATA": { "actual": "oAXI_data"},
+						"TREADY": { "actual": "oAXI_ready"},
+						"TVALID": { "actual": "oAXI_valid"}
+					}
+				},
+				"/axi4stream_vip_0/M_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TREADY": { "actual": "m_axis_tready"},
+						"TVALID": { "actual": "m_axis_tvalid"}
+					}
+				},
+				"/axi4stream_vip_1/S_AXIS": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jun 28 02:26:38 2022
+# Process ID: 48200
+# Current directory: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent71216 C:\Users\kacpe\OneDrive\Pulpit\Projekt_SDUP\Projekt_SDUP.xpr
+# Log file: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/vivado.log
+# Journal file: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.xpr
+launch_simulation
+source tb.tcl
+update_compile_order -fileset sources_1
+current_wave_config {Untitled 1}
+add_wave {{/tb/design_1_wrapper/design_1_i/AXI_FIFO_0}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+launch_simulation
+source tb.tcl
+current_wave_config {Untitled 2}
+add_wave {{/tb/design_1_wrapper/design_1_i/AXI_FIFO_0}} 
+close_sim

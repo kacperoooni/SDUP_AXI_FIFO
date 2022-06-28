@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jun 21 20:49:59 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : SDUP_PROJEKT
+Top-level Entity Name : pd1
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 3,840 / 6,272 ( 61 % )
+    Total combinational functions : 2,609 / 6,272 ( 42 % )
+    Dedicated logic registers : 2,761 / 6,272 ( 44 % )
+Total registers : 2761
+Total pins : 2 / 92 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 168,576 / 276,480 ( 61 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

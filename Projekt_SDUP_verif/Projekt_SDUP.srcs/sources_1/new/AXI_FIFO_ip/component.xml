@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>AXI_FIFO</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>iAXI_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>iAXI_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.IAXI_ACLK.ASSOCIATED_BUSIF">iAXI</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>oAXI_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>oAXI_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.OAXI_ACLK.PHASE">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.OAXI_ACLK.FREQ_HZ">200000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.OAXI_ACLK.ASSOCIATED_BUSIF">oAXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.OAXI_ACLK.CLK_DOMAIN">oAXI_dom</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>iAXI</spirit:name>
+      <spirit:displayName>iAXI</spirit:displayName>
+      <spirit:description>slave FIFO input AXI</spirit:description>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>iAXI_tuser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>iAXI_data</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>iAXI_valid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>iAXI_ready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>oAXI</spirit:name>
+      <spirit:displayName>oAXI</spirit:displayName>
+      <spirit:description>master FIFO output AXI</spirit:description>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>oAXI_data</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>oAXI_valid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>oAXI_ready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.OAXI.CLK_DOMAIN">oAXI_dom</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>AXI_FIFO</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>d880ce5e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>SystemVerilog</spirit:language>
+        <spirit:modelName>AXI_FIFO</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>d880ce5e</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>71957dd2</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>iAXI_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>iAXI_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.FIFO_WIDTH&apos;))) - 1)">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>iAXI_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>iAXI_ready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>iAXI_tuser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>oAXI_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>oAXI_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.FIFO_WIDTH&apos;))) - 1)">15</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>oAXI_valid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>oAXI_ready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>FIFO_WIDTH</spirit:name>
+        <spirit:displayName>Fifo Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FIFO_WIDTH">2</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>FIFO_DEPTH</spirit:name>
+        <spirit:displayName>Fifo Depth</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FIFO_DEPTH">10</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>FIFO.v</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_d880ce5e</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>FIFO.v</spirit:name>
+        <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/AXI_FIFO_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_71957dd2</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>AXI_FIFO_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>FIFO_WIDTH</spirit:name>
+      <spirit:displayName>Fifo Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FIFO_WIDTH">2</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>FIFO_DEPTH</spirit:name>
+      <spirit:displayName>Fifo Depth</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FIFO_DEPTH">10</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">AXI_FIFO_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>AXI_FIFO_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>46</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2022-06-14T07:50:50Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5269b884_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b0f69a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25011278_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f90adab_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f2caf7a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@557d4211_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a56c6ea_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e2ffcb1_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@575c76b1_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19722e0a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e1967f3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e22f3fa_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@363d5e63_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2af0b136_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62fe5aca_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28a94357_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e9734fe_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23bdf4f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b389af5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c3715c8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31993c04_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16dac880_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b9df2d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f6ae629_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@158a04d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@420450d0_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65ca7666_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26668c5d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7346e801_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e207eb_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@333e4575_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27f501a7_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@821c253_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f53cfce_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39aa39c1_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49cc43c6_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65193787_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3da31cf8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ebb0e99_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b8629d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6849193f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30c33f82_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e1486eb_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a6a1f39_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22040d2f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c3c762c_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a3d29e1_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66acc987_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35a0ea38_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1191c4f8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42e05331_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6799dec2_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@366495_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25cce8f5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@409704ab_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@912f438_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6001f4c3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f50b2d7_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14941e09_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fa46d39_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4444d122_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cc112a7_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eb20268_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1801a360_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@699f01c_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c17175b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c418c56_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79e08db_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b809717_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25a6e1d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ac9cae_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68d4ae55_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@172fee5b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46054853_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db1a48a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ea785aa_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fe4c5e9_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a8ffc16_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3152024f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f73421b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70928cc2_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67575041_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d9dd67_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a0f6836_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b91acb_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@228aed77_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5002191b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65600631_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5788eb6b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c3f44bb_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@787cb7a4_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e26a47f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d2c086e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2e027a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57c6d626_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@400ea3be_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6099206c_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66a274a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f8107e0_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2469ec06_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b0e0d63_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17952c2c_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63af6130_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@566b2526_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ed23c6f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29651f14_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d4c4adb_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e9a907d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@705d9b68_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@763264df_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512dae75_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@185692e5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a5ddc2f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e31024_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@649d05c5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e62fc1c_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30e196d5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43100eb7_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5715e716_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38707f1a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c94ac2_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fc7543f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78426a51_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60ba8a26_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52b8b118_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36d69ed3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5104f64a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5556d05f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@109986fd_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18b9e5c6_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f15a3ff_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b450aaa_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79ae2b09_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c5871a7_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f499a50_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@aa7e9e5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa6e592_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d3ca03b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b8f0d10_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@433b4e45_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68e1ddf8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31b3fc2c_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73867d57_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c48efe6_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84915ab_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15f90cf4_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@748418a3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31787b6e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24e28348_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45bbbbdd_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1363cb72_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4581a66f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a203067_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7216bbc0_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@761f98e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28ead289_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39fd7a94_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e72b0b7_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cb3ba78_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f4a199e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54eaa9a6_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e8548c4_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@642038f9_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@587318a9_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e14c94b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c88971e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5733fbc3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b9770a8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bb44970_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c5c0b3f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63dfe4c4_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ea8b3b4_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64183ddc_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69cd38d3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@513427a3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a72ea51_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f4392d8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f596de6_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6faf683a_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f2edebb_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56ea52b8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a59d67d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bf3c9df_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41fa4de3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e52fc4b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@765fc6dc_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c9e034e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b3203d7_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ae9dfd2_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7095e772_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@360ab965_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a4f5b8b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c49fca5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e8d66d5_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3720b6d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74613b2f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b5b0c29_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e8fcb81_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@735cf09c_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d7d8d45_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33731b09_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@493fc6a1_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23c2cdac_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41c9f073_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42722f5b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ffe4a2e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2939a0ea_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e46e63f_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6934ab00_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e99cf55_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@727594bf_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba421ff_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c1724ce_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fcd74d8_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f636718_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@524b66c3_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3520dd1b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fa05766_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f8d3efd_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@773896c6_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22566cb1_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48c586a0_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@147893de_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31338291_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b18e13d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@494514ef_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79e4834b_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c79149e_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47e4290d_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b8945ea_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d87a5fc_ARCHIVE_LOCATION">c:/users/kacpe/desktop/projekt_sdup/projekt_sdup.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@358af8f6_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4629bb69_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c2c6efe_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@597c2f75_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58919b10_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3144f793_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@340beffa_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33967bca_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10bd4076_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9fff9e1_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@369eb5b1_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dea5afb_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@97f5817_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53d38752_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32001deb_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b4f8f2e_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49ca556b_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6345f5_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16336635_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40cd7ab_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@208f6130_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@517a03c2_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1031037e_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@137d727a_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe0f945_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bf46cfd_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b6ebe9e_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70a5adbe_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e91d353_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6126634_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23ebee57_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@114db88c_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68755cd2_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f95fc0e_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70507872_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b8bf4fc_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca79513_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a0705ae_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d85d14_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c84f642_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c94f3c4_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@245012c6_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26328712_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32dad645_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32dda9ec_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@217e852f_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a927131_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e6bd5b4_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@167648a2_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75538058_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a461292_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47abd91e_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e5c956c_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ca5de4d_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@acdcb66_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3bb9dd_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1acaa4bb_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34e979bd_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78f04ffe_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d8df2d_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f7452c8_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5050b27e_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d17d95a_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65e7841_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7be99b86_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2efbb4c9_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a824357_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11362fc2_ARCHIVE_LOCATION">c:/Users/kacpe/Desktop/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@239a5fb3_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@671c4930_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@240ddffc_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c4d1c25_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1004a056_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17cf1043_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68d61bfc_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef14a30_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47dd8a7f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23b5c4f4_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d928a27_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c499bde_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a1e1c60_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37692065_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4123ca95_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cf523f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75af90cf_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff2bec7_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a3ba040_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22e43a12_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f0f4077_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@723c7fc2_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ba3b600_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cfbb0be_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b8a68a9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a244dec_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@266a48ea_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38e46bb9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac076da_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e994d6a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ce2fb8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6532a7a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@654ff0bf_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ef3ea69_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fa563e5_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e348acc_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5389adb1_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68015d95_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@428b1e6a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ac2b029_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39a793ab_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b68416f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@275e5b06_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8f3d1ce_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41b5d612_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21668cca_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e9072c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@109a367e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33ce4071_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b1abe0_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3531b936_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cb14fdf_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39a52c6a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74bdfb23_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25e7b708_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36ef2f70_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37f6fdad_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7451f10f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15dae667_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2733e6b4_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41299a6b_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17186eec_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a166ff8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c858646_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fbf1ebe_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cdc0d56_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34a05864_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@117d2235_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@401a099f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c243534_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@702c7ec8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14793016_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3343fafe_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e55590_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@632b02e4_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e92897_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b98985c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@425a8013_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51b61e06_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c27a4cf_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@714de737_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25bd4dec_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71e38dc1_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@534a4f29_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40e7429e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f8e631_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@395538df_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6753e5ee_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6595cc1_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c0fa358_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5eb5814_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e5a36af_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43a74235_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f1748a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21c8a3e4_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b645b50_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60c5722d_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a6e088c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@342c550c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da8cbf7_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66d360_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@467d79e7_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cb52a99_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@667505e6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5220e0b9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5424382e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62d640ab_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40e2f2d7_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@218ad67f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4502a8dd_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8554242_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34fd5468_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20fb9a41_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d08e748_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10b92fbc_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3328334_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b20b27_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@689d3386_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@695e126e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@696954a6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a589a39_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6eb47bce_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74ddd569_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64c13c25_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1848b918_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6826d2d6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@370f2650_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df3242c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58958930_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17738b8f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51b2e86d_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf7ab41_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@456815f0_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a53314_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75b4a32a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f0de483_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@149b4781_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b7f9e8a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7158f626_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f3fe5bb_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a5fab94_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@89b7f13_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d1f8de_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e14c56c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a7777e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a67e84c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@733107ff_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c7fd917_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39c7eaf6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58f8597_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a26a4_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42de3281_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52f621d5_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a32b82d_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e577f4b_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19aafed2_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b840cbb_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de661b8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a83b205_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34eb3050_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dffce3_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c142d97_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@493bd22c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16834e13_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5713fcaf_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a38aa9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@787d6430_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70fbd3ea_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3de3d604_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ebe378f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6209559a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5375d002_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cb0aeb_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e7ab91a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d64335e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14fcf007_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4831644f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7696c791_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f4ac1a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5647ef24_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@697ed40d_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48c9e3e8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c60b861_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c50c3d5_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df7ba9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@503c9d62_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20a54165_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c95ecc9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44794a0b_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52bdfc23_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58fe770e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c9960ed_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d4fe597_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34113411_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23c99615_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47a7f6f2_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75b458ff_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@596b834_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f54c0b7_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e62481_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c48eb49_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d328b8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d8d5723_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@242d9810_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f76cf1_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a7f0162_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@754ddcf4_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39c946c6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@672c9667_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dfc9b4a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46df3d2c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@134770d1_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e3e1ca6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a8511b2_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f472379_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6378bfb9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b5d5d2e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e2a4f1_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ea990d3_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dd75633_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@aac82e2_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4691101_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f170665_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2180ec46_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26da56a6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44b6c5f7_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef5803c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@298484c8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a64209f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4347e36f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@679f03e9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@514b516_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f543c06_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ae7c887_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2662c6e0_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13823c55_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fa3b9e6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70501e57_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aa16a6a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1698d80d_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6901b13a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@224afa62_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3576dd95_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35579437_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69d50e3e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c3e065c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427cdca5_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c6ce1d8_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5560e5f1_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44a22e60_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e2d96b_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a824389_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56ee7765_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b60fee4_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40834cad_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c709ffb_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7de45f5e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d0aaca3_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53154b1e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609e91e2_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2745f276_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1939b676_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e1417bd_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dae68ed_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@593063_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28705bca_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d2a9f3_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10cde633_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776f2e87_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a2d333_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@674bf62d_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28ed655_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75c1b7c6_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3411daa2_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6abddd_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76704b57_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f2fdf7e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@167d0b03_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@232ad216_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b56d80_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a35a9c9_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2db266b7_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@311bca05_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b45b21_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df8159f_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a1d2fd0_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7818a830_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ea4d44b_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3040ce60_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54406fcf_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4696f685_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f59fd75_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a00ac8a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70732046_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64fb5204_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b453d63_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25efec68_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db12a91_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3fbac3_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c18fc34_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36939f3c_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a6b7d1d_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bca1856_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bfe6615_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6388475a_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d9a2b50_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29e00f02_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b25cf5e_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3da323cd_ARCHIVE_LOCATION">c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="5238b988"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="926d9b09"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="5ca44a4d"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0147ef67"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="1e9ce7e1"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

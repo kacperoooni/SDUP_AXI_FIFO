@@ -1,0 +1,216 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Jun 13 18:24:53 2022
+# Process ID: 19312
+# Current directory: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20108 C:\Users\kacpe\OneDrive\Pulpit\Projekt_SDUP\Projekt_SDUP.xpr
+# Log file: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/vivado.log
+# Journal file: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/FIFO.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Uczelnia/Vivado/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:axi4stream_vip:1.1 - axi4stream_vip_0
+Adding component instance block -- xilinx.com:ip:axi4stream_vip:1.1 - axi4stream_vip_1
+Adding component instance block -- xilinx.com:user:AXI_FIFO:1.0 - AXI_FIFO_0
+Successfully read diagram <design_1> from BD file <C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd>
+ipx::edit_ip_in_project -upgrade true -name AXI_FIFO_v1_0_project -directory C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.tmp/AXI_FIFO_v1_0_project c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/kacpe/onedrive/pulpit/projekt_sdup/projekt_sdup.tmp/axi_fifo_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Uczelnia/Vivado/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/FIFO.v:]
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 799.121 ; gain = 16.570
+update_compile_order -fileset sources_1
+ipx::associate_bus_interfaces -busif oAXI -clock iAXI_aclk -clear [ipx::current_core]
+ipx::associate_bus_interfaces -busif oAXI -clock aclk -clear [ipx::current_core]
+ipx::associate_bus_interfaces -busif oAXI -clock oAXI_aclk [ipx::current_core]
+set_property core_revision 23 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:AXI_FIFO:1.0 [get_ips  design_1_AXI_FIFO_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_AXI_FIFO_0_0 (AXI_FIFO_v1_0 1.0) from revision 22 to revision 23
+Wrote  : <C:\Users\kacpe\OneDrive\Pulpit\Projekt_SDUP\Projekt_SDUP.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_AXI_FIFO_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-967] AXI interface pin /AXI_FIFO_0/iAXI is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-1732] Bus interface '/AXI_FIFO_0/oAXI' is found to be associated with multiple clock-pins. This may prevent design from functioning correctly. List of associated clock-pins:
+/AXI_FIFO_0/aclk
+/AXI_FIFO_0/iAXI_aclk
+/AXI_FIFO_0/oAXI_aclk
+
+.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /AXI_FIFO_0/iAXI(100000000) and /axi4stream_vip_0/M_AXIS(200000)
+ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axi4stream_vip_1/S_AXIS(design_1_AXI_FIFO_0_0_oAXI_aclk) and /AXI_FIFO_0/oAXI(design_1_clk)
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/iAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/oAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_AXI_FIFO_0_0_oAXI_aclk 
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+report_ip_status -name ip_status 
+generate_target all [get_files  C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-967] AXI interface pin /AXI_FIFO_0/iAXI is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-1732] Bus interface '/AXI_FIFO_0/oAXI' is found to be associated with multiple clock-pins. This may prevent design from functioning correctly. List of associated clock-pins:
+/AXI_FIFO_0/aclk
+/AXI_FIFO_0/iAXI_aclk
+/AXI_FIFO_0/oAXI_aclk
+
+.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /AXI_FIFO_0/iAXI(100000000) and /axi4stream_vip_0/M_AXIS(200000)
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/iAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/oAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_AXI_FIFO_0_0_oAXI_aclk 
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name AXI_FIFO_v1_0_project -directory C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.tmp/AXI_FIFO_v1_0_project c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/kacpe/onedrive/pulpit/projekt_sdup/projekt_sdup.tmp/axi_fifo_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Uczelnia/Vivado/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/FIFO.v:]
+update_compile_order -fileset sources_1
+ipx::associate_bus_interfaces -busif iAXI -clock iAXI_aclk [ipx::current_core]
+ipx::associate_bus_interfaces -busif oAXI -clock iAXI_aclk -clear [ipx::current_core]
+ipx::associate_bus_interfaces -busif oAXI -clock aclk -clear [ipx::current_core]
+ipx::associate_bus_interfaces -busif oAXI -clock oAXI_aclk [ipx::current_core]
+set_property core_revision 24 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:AXI_FIFO:1.0 [get_ips  design_1_AXI_FIFO_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_AXI_FIFO_0_0 (AXI_FIFO_v1_0 1.0) from revision 23 to revision 24
+Wrote  : <C:\Users\kacpe\OneDrive\Pulpit\Projekt_SDUP\Projekt_SDUP.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_AXI_FIFO_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'.
+report_ip_status -name ip_status
+upgrade_ip -vlnv xilinx.com:user:AXI_FIFO:1.0 [get_ips  design_1_AXI_FIFO_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_AXI_FIFO_0_0 to use current project options
+Wrote  : <C:\Users\kacpe\OneDrive\Pulpit\Projekt_SDUP\Projekt_SDUP.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_AXI_FIFO_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-967] AXI interface pin /AXI_FIFO_0/iAXI is not associated to any clock pin. It may not work correctly.
+CRITICAL WARNING: [BD 41-1732] Bus interface '/AXI_FIFO_0/oAXI' is found to be associated with multiple clock-pins. This may prevent design from functioning correctly. List of associated clock-pins:
+/AXI_FIFO_0/aclk
+/AXI_FIFO_0/iAXI_aclk
+/AXI_FIFO_0/oAXI_aclk
+
+.
+ERROR: [BD 41-237] Bus Interface property FREQ_HZ does not match between /AXI_FIFO_0/iAXI(100000000) and /axi4stream_vip_0/M_AXIS(200000)
+ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axi4stream_vip_1/S_AXIS(design_1_AXI_FIFO_0_0_oAXI_aclk) and /AXI_FIFO_0/oAXI(design_1_clk)
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/iAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/oAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_AXI_FIFO_0_0_oAXI_aclk 
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name AXI_FIFO_v1_0_project -directory C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.tmp/AXI_FIFO_v1_0_project c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/kacpe/onedrive/pulpit/projekt_sdup/projekt_sdup.tmp/axi_fifo_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Uczelnia/Vivado/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/FIFO.v:]
+update_compile_order -fileset sources_1
+ipx::remove_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces iAXI_aclk -of_objects [ipx::current_core]]
+ipx::remove_bus_parameter ASSOCIATED_BUSIF [ipx::get_bus_interfaces oAXI_aclk -of_objects [ipx::current_core]]
+ipx::associate_bus_interfaces -busif oAXI -clock aclk -clear [ipx::current_core]
+ipx::associate_bus_interfaces -busif oAXI -clock oAXI_aclk [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'oAXI_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'oAXI'.
+ipx::associate_bus_interfaces -busif iAXI -clock iAXI_aclk [ipx::current_core]
+INFO: [IP_Flow 19-4728] Bus Interface 'iAXI_aclk': Added interface parameter 'ASSOCIATED_BUSIF' with value 'iAXI'.
+set_property core_revision 25 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:AXI_FIFO:1.0 [get_ips  design_1_AXI_FIFO_0_0] -log ip_upgrade.log
+Upgrading 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_1_AXI_FIFO_0_0 (AXI_FIFO_v1_0 1.0) from revision 24 to revision 25
+Wrote  : <C:\Users\kacpe\OneDrive\Pulpit\Projekt_SDUP\Projekt_SDUP.srcs\sources_1\bd\design_1\design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_AXI_FIFO_0_0] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-1732] Bus interface '/AXI_FIFO_0/oAXI' is found to be associated with multiple clock-pins. This may prevent design from functioning correctly. List of associated clock-pins:
+/AXI_FIFO_0/aclk
+/AXI_FIFO_0/oAXI_aclk
+
+.
+ERROR: [BD 41-237] Bus Interface property CLK_DOMAIN does not match between /axi4stream_vip_1/S_AXIS(design_1_AXI_FIFO_0_0_oAXI_aclk) and /AXI_FIFO_0/oAXI(design_1_clk)
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/iAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_clk 
+WARNING: [BD 41-927] Following properties on pin /AXI_FIFO_0/oAXI_aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_AXI_FIFO_0_0_oAXI_aclk 
+ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/bd/design_1/design_1.bd 
+ERROR: [Common 17-39] 'generate_target' failed due to earlier errors.
+ipx::edit_ip_in_project -upgrade true -name AXI_FIFO_v1_0_project -directory C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.tmp/AXI_FIFO_v1_0_project c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/kacpe/onedrive/pulpit/projekt_sdup/projekt_sdup.tmp/axi_fifo_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Uczelnia/Vivado/Vivado/2019.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/AXI_FIFO_ip/FIFO.v:]
+update_compile_order -fileset sources_1
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 13 18:31:16 2022...

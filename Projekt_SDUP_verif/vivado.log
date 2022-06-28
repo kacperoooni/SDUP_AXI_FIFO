@@ -1,0 +1,1760 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Jun 28 02:26:38 2022
+# Process ID: 48200
+# Current directory: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent71216 C:\Users\kacpe\OneDrive\Pulpit\Projekt_SDUP\Projekt_SDUP.xpr
+# Log file: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/vivado.log
+# Journal file: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Uczelnia/Vivado/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 685.020 ; gain = 71.305
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /tb/mst_agent was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/slv_agent was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/wr_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/slv_monitor_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/ready_gen was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 100000000ns
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing 5555 to FIFO. Element nr           0
+Writing 5656 to FIFO. Element nr           1
+Writing 5757 to FIFO. Element nr           2
+Writing 5858 to FIFO. Element nr           3
+Writing 5959 to FIFO. Element nr           4
+Writing 5a5a to FIFO. Element nr           5
+Writing 5b5b to FIFO. Element nr           6
+Writing 5c5c to FIFO. Element nr           7
+Writing 5d5d to FIFO. Element nr           8
+Writing 5e5e to FIFO. Element nr           9
+Reading 5555 from FIFO. Element nr           0
+Reading 5656 from FIFO. Element nr           1
+Reading 5757 from FIFO. Element nr           2
+Reading 5858 from FIFO. Element nr           3
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.1/continuous/2019_05_24_2552052/packages/customer/vivado/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv: file does not exist.
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 817.551 ; gain = 0.000
+xsim: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 817.551 ; gain = 20.414
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000000ns
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 817.551 ; gain = 48.512
+update_compile_order -fileset sources_1
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/tb/design_1_wrapper/design_1_i/AXI_FIFO_0}} 
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing 5555 to FIFO. Element nr           0
+Writing 5656 to FIFO. Element nr           1
+Writing 5757 to FIFO. Element nr           2
+Writing 5858 to FIFO. Element nr           3
+Writing 5959 to FIFO. Element nr           4
+Writing 5a5a to FIFO. Element nr           5
+Writing 5b5b to FIFO. Element nr           6
+Writing 5c5c to FIFO. Element nr           7
+Writing 5d5d to FIFO. Element nr           8
+Writing 5e5e to FIFO. Element nr           9
+Reading 5555 from FIFO. Element nr           0
+Reading 5656 from FIFO. Element nr           1
+Reading 5757 from FIFO. Element nr           2
+Reading 5858 from FIFO. Element nr           3
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 817.551 ; gain = 0.000
+relaunch_xsim_kernel: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 817.551 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 817.551 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 836.293 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 836.293 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing 5555 to FIFO. Element nr           0
+Writing 5656 to FIFO. Element nr           1
+Writing 5757 to FIFO. Element nr           2
+Writing 5858 to FIFO. Element nr           3
+Writing 5959 to FIFO. Element nr           4
+Writing 5a5a to FIFO. Element nr           5
+Writing 5b5b to FIFO. Element nr           6
+Writing 5c5c to FIFO. Element nr           7
+Writing 5d5d to FIFO. Element nr           8
+Writing 5e5e to FIFO. Element nr           9
+Reading 5555 from FIFO. Element nr           0
+Reading 5656 from FIFO. Element nr           1
+Reading 5757 from FIFO. Element nr           2
+Reading 5858 from FIFO. Element nr           3
+Reading 5959 from FIFO. Element nr           4
+Reading 5a5a from FIFO. Element nr           5
+Reading 5b5b from FIFO. Element nr           6
+Reading 5c5c from FIFO. Element nr           7
+Reading 5d5d from FIFO. Element nr           8
+Reading 5e5e from FIFO. Element nr           9
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 75
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 836.293 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing 5555 to FIFO. Element nr           0
+Writing 5656 to FIFO. Element nr           1
+Writing 5757 to FIFO. Element nr           2
+Writing 5858 to FIFO. Element nr           3
+Writing 5959 to FIFO. Element nr           4
+Writing 5a5a to FIFO. Element nr           5
+Writing 5b5b to FIFO. Element nr           6
+Writing 5c5c to FIFO. Element nr           7
+Writing 5d5d to FIFO. Element nr           8
+Writing 5e5e to FIFO. Element nr           9
+Reading 5555 from FIFO. Element nr           0
+Reading 5656 from FIFO. Element nr           1
+Reading 5757 from FIFO. Element nr           2
+Reading 5858 from FIFO. Element nr           3
+Reading 5959 from FIFO. Element nr           4
+Reading 5a5a from FIFO. Element nr           5
+Reading 5b5b from FIFO. Element nr           6
+Reading 5c5c from FIFO. Element nr           7
+Reading 5d5d from FIFO. Element nr           8
+Reading 5e5e from FIFO. Element nr           9
+$finish called at time : 43800001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 74
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 836.293 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing 5555 to FIFO. Element nr           0
+Writing 5656 to FIFO. Element nr           1
+Writing 5757 to FIFO. Element nr           2
+Writing 5858 to FIFO. Element nr           3
+Writing 5959 to FIFO. Element nr           4
+Writing 5a5a to FIFO. Element nr           5
+Writing 5b5b to FIFO. Element nr           6
+Writing 5c5c to FIFO. Element nr           7
+Writing 5d5d to FIFO. Element nr           8
+Writing 5e5e to FIFO. Element nr           9
+Reading 5555 from FIFO. Element nr           0
+Reading 5656 from FIFO. Element nr           1
+Reading 5757 from FIFO. Element nr           2
+Reading 5858 from FIFO. Element nr           3
+Reading 5959 from FIFO. Element nr           4
+Reading 5a5a from FIFO. Element nr           5
+Reading 5b5b from FIFO. Element nr           6
+Reading 5c5c from FIFO. Element nr           7
+Reading 5d5d from FIFO. Element nr           8
+Reading 5e5e from FIFO. Element nr           9
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 74
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 836.293 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b455 to FIFO. Element nr           0
+Writing 8656 to FIFO. Element nr           1
+Writing 1c57 to FIFO. Element nr           2
+Writing 8958 to FIFO. Element nr           3
+Writing 9059 to FIFO. Element nr           4
+Writing a35a to FIFO. Element nr           5
+Writing cc5b to FIFO. Element nr           6
+Writing 445c to FIFO. Element nr           7
+Writing 2a5d to FIFO. Element nr           8
+Writing e95e to FIFO. Element nr           9
+Reading 55b4 from FIFO. Element nr           0
+Reading 5686 from FIFO. Element nr           1
+Reading 571c from FIFO. Element nr           2
+Reading 5889 from FIFO. Element nr           3
+Reading 5990 from FIFO. Element nr           4
+Reading 5aa3 from FIFO. Element nr           5
+Reading 5bcc from FIFO. Element nr           6
+Reading 5c44 from FIFO. Element nr           7
+Reading 5d2a from FIFO. Element nr           8
+Reading 5ee9 from FIFO. Element nr           9
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 75
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 838.906 ; gain = 2.613
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-4982] syntax error near 'mtestWData' [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2967] 'mtestWData' is not a task [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-800] illegal concatenation of unpacked value [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-395] cannot assign a packed type to an unpacked type [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-323] array element widths (10, 2) don't match [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-395] cannot assign an unpacked type to a packed type [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-4982] syntax error near 'mtestWData' [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2967] 'mtestWData' is not a task [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:57]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b486 to FIFO. Element nr           0
+Writing 1c89 to FIFO. Element nr           1
+Writing 90a3 to FIFO. Element nr           2
+Writing cc44 to FIFO. Element nr           3
+Writing 2ae9 to FIFO. Element nr           4
+Writing ceba to FIFO. Element nr           5
+Writing 8c9a to FIFO. Element nr           6
+Writing feb6 to FIFO. Element nr           7
+Writing 83cc to FIFO. Element nr           8
+Writing 7010 to FIFO. Element nr           9
+Reading 86b4 from FIFO. Element nr           0
+Reading 891c from FIFO. Element nr           1
+Reading a390 from FIFO. Element nr           2
+Reading 44cc from FIFO. Element nr           3
+Reading e92a from FIFO. Element nr           4
+Reading bace from FIFO. Element nr           5
+Reading 9a8c from FIFO. Element nr           6
+Reading b6fe from FIFO. Element nr           7
+Reading cc83 from FIFO. Element nr           8
+Reading 1070 from FIFO. Element nr           9
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 75
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 841.344 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-4982] syntax error near ',' [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:74]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 864.746 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 864.746 ; gain = 0.000
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b486 to FIFO. Element nr           0
+Writing 1c89 to FIFO. Element nr           1
+Writing 90a3 to FIFO. Element nr           2
+Writing cc44 to FIFO. Element nr           3
+Writing 2ae9 to FIFO. Element nr           4
+Writing ceba to FIFO. Element nr           5
+Writing 8c9a to FIFO. Element nr           6
+Writing feb6 to FIFO. Element nr           7
+Writing 83cc to FIFO. Element nr           8
+Writing 7010 to FIFO. Element nr           9
+Reading b486 from FIFO. Element nr           0
+Reading 1c89 from FIFO. Element nr           1
+Reading 90a3 from FIFO. Element nr           2
+Reading cc44 from FIFO. Element nr           3
+Reading 2ae9 from FIFO. Element nr           4
+Reading ceba from FIFO. Element nr           5
+Reading 8c9a from FIFO. Element nr           6
+Reading feb6 from FIFO. Element nr           7
+Reading 83cc from FIFO. Element nr           8
+Reading 7010 from FIFO. Element nr           9
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 76
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 864.746 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 75, File C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b486 to FIFO. Element nr           0
+Writing 1c89 to FIFO. Element nr           1
+Writing 90a3 to FIFO. Element nr           2
+Writing cc44 to FIFO. Element nr           3
+Writing 2ae9 to FIFO. Element nr           4
+Writing ceba to FIFO. Element nr           5
+Writing 8c9a to FIFO. Element nr           6
+Writing feb6 to FIFO. Element nr           7
+Writing 83cc to FIFO. Element nr           8
+Writing 7010 to FIFO. Element nr           9
+Reading b486 from FIFO. Element nr           0. Was: 86b4
+Fatal: Data From FIFO differs!
+Time: 20000001 ps  Iteration: 0  Process: /tb/Initial44_159  File: C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v
+$finish called at time : 20000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 75
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 864.746 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 75, File C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b486 to FIFO. Element nr           0
+Writing 1c89 to FIFO. Element nr           1
+Writing 90a3 to FIFO. Element nr           2
+Writing cc44 to FIFO. Element nr           3
+Writing 2ae9 to FIFO. Element nr           4
+Writing ceba to FIFO. Element nr           5
+Writing 8c9a to FIFO. Element nr           6
+Writing feb6 to FIFO. Element nr           7
+Writing 83cc to FIFO. Element nr           8
+Writing 7010 to FIFO. Element nr           9
+Reading b486 from FIFO. Element nr           0. Was: 86b4
+Reading 1c89 from FIFO. Element nr           1. Was: 891c
+Reading 90a3 from FIFO. Element nr           2. Was: a390
+Reading cc44 from FIFO. Element nr           3. Was: 44cc
+Reading 2ae9 from FIFO. Element nr           4. Was: e92a
+Reading ceba from FIFO. Element nr           5. Was: bace
+Reading 8c9a from FIFO. Element nr           6. Was: 9a8c
+Reading feb6 from FIFO. Element nr           7. Was: b6fe
+Reading 83cc from FIFO. Element nr           8. Was: cc83
+Reading 7010 from FIFO. Element nr           9. Was: 1070
+Test PASSED
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 78
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 864.746 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-4982] syntax error near '[' [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-1304] range is not allowed in a prefix [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+ERROR: [VRFC 10-1304] range is not allowed in a prefix [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [VRFC 10-800] illegal concatenation of unpacked value [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:73]
+ERROR: [VRFC 10-2865] module 'tb' ignored due to previous errors [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:25]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 75, File C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b486 to FIFO. Element nr           0
+Writing 1c89 to FIFO. Element nr           1
+Writing 90a3 to FIFO. Element nr           2
+Writing cc44 to FIFO. Element nr           3
+Writing 2ae9 to FIFO. Element nr           4
+Writing ceba to FIFO. Element nr           5
+Writing 8c9a to FIFO. Element nr           6
+Writing feb6 to FIFO. Element nr           7
+Writing 83cc to FIFO. Element nr           8
+Writing 7010 to FIFO. Element nr           9
+Reading b486 from FIFO. Element nr           0. Was: 86b4
+Reading 1c89 from FIFO. Element nr           1. Was: 891c
+Reading 90a3 from FIFO. Element nr           2. Was: a390
+Reading cc44 from FIFO. Element nr           3. Was: 44cc
+Reading 2ae9 from FIFO. Element nr           4. Was: e92a
+Reading ceba from FIFO. Element nr           5. Was: bace
+Reading 8c9a from FIFO. Element nr           6. Was: 9a8c
+Reading feb6 from FIFO. Element nr           7. Was: b6fe
+Reading 83cc from FIFO. Element nr           8. Was: cc83
+Reading 7010 from FIFO. Element nr           9. Was: 1070
+Test PASSED
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 78
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 864.746 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 75, File C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b486 to FIFO. Element nr           0
+Writing 1c89 to FIFO. Element nr           1
+Writing 90a3 to FIFO. Element nr           2
+Writing cc44 to FIFO. Element nr           3
+Writing 2ae9 to FIFO. Element nr           4
+Writing ceba to FIFO. Element nr           5
+Writing 8c9a to FIFO. Element nr           6
+Writing feb6 to FIFO. Element nr           7
+Writing 83cc to FIFO. Element nr           8
+Writing 7010 to FIFO. Element nr           9
+Reading b486 from FIFO. Element nr           0. Was: b486
+Reading 1c89 from FIFO. Element nr           1. Was: 1c89
+Reading 90a3 from FIFO. Element nr           2. Was: 90a3
+Reading cc44 from FIFO. Element nr           3. Was: cc44
+Reading 2ae9 from FIFO. Element nr           4. Was: 2ae9
+Reading ceba from FIFO. Element nr           5. Was: ceba
+Reading 8c9a from FIFO. Element nr           6. Was: 8c9a
+Reading feb6 from FIFO. Element nr           7. Was: feb6
+Reading 83cc from FIFO. Element nr           8. Was: 83cc
+Reading 7010 from FIFO. Element nr           9. Was: 7010
+Test PASSED
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 78
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 864.746 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:75]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 75, File C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Writing b486 to FIFO. Element nr    0
+Writing 1c89 to FIFO. Element nr    1
+Writing 90a3 to FIFO. Element nr    2
+Writing cc44 to FIFO. Element nr    3
+Writing 2ae9 to FIFO. Element nr    4
+Writing ceba to FIFO. Element nr    5
+Writing 8c9a to FIFO. Element nr    6
+Writing feb6 to FIFO. Element nr    7
+Writing 83cc to FIFO. Element nr    8
+Writing 7010 to FIFO. Element nr    9
+Reading b486 from FIFO. Element nr    0. Was: b486
+Reading 1c89 from FIFO. Element nr    1. Was: 1c89
+Reading 90a3 from FIFO. Element nr    2. Was: 90a3
+Reading cc44 from FIFO. Element nr    3. Was: cc44
+Reading 2ae9 from FIFO. Element nr    4. Was: 2ae9
+Reading ceba from FIFO. Element nr    5. Was: ceba
+Reading 8c9a from FIFO. Element nr    6. Was: 8c9a
+Reading feb6 from FIFO. Element nr    7. Was: feb6
+Reading 83cc from FIFO. Element nr    8. Was: 83cc
+Reading 7010 from FIFO. Element nr    9. Was: 7010
+Test PASSED
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 78
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 864.746 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:76]
+Completed static elaboration
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 76, File C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xil_defaultlib.AXI_FIFO
+Compiling module xil_defaultlib.design_1_AXI_FIFO_0_0
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module axi4stream_vip_v1_1_5.axi4stream_vip_v1_1_5_top(C_AXI4...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_1
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Starting test!
+Writing b486 to FIFO. Element nr    0
+Writing 1c89 to FIFO. Element nr    1
+Writing 90a3 to FIFO. Element nr    2
+Writing cc44 to FIFO. Element nr    3
+Writing 2ae9 to FIFO. Element nr    4
+Writing ceba to FIFO. Element nr    5
+Writing 8c9a to FIFO. Element nr    6
+Writing feb6 to FIFO. Element nr    7
+Writing 83cc to FIFO. Element nr    8
+Writing 7010 to FIFO. Element nr    9
+Reading b486 from FIFO. Element nr    0. Was: b486
+Reading 1c89 from FIFO. Element nr    1. Was: 1c89
+Reading 90a3 from FIFO. Element nr    2. Was: 90a3
+Reading cc44 from FIFO. Element nr    3. Was: cc44
+Reading 2ae9 from FIFO. Element nr    4. Was: 2ae9
+Reading ceba from FIFO. Element nr    5. Was: ceba
+Reading 8c9a from FIFO. Element nr    6. Was: 8c9a
+Reading feb6 from FIFO. Element nr    7. Was: feb6
+Reading 83cc from FIFO. Element nr    8. Was: 83cc
+Reading 7010 from FIFO. Element nr    9. Was: 7010
+#################################################################### Test PASSED!!! ####################################################################
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 79
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 864.746 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'D:/Uczelnia/Vivado/Vivado/2019.1/data/xsim/xsim.ini' copied to run dir:'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi4stream_vip_v1_1_5 -L xilinx_vip -prj tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+"xelab -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Uczelnia/Vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 9a4d0a8189074604875d62925afe5d67 --incr --debug typical --relax --mt 2 -L axis_infrastructure_v1_1_0 -L xil_defaultlib -L axi4stream_vip_v1_1_5 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v:76]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_behav -key {Behavioral:sim_1:Functional:tb} -tclbatch {tb.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//AXI_FIFO_0/oAXI
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /tb/design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+WARNING: [Wavedata 42-559] Protocol instance "/tb/design_1_wrapper/design_1_i//AXI_FIFO_0/iAXI" was created but is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+Time resolution is 1 ps
+source tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /tb/mst_agent was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/slv_agent was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/wr_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/slv_monitor_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /tb/ready_gen was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# log_wave -r /
+WARNING: [Simtcl 6-197] One or more HDL objects could not be logged because of object type or size limitations.  To see details please rerun the command with -verbose (-v).
+# run 100000000ns
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: tb.design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Starting test!
+Writing b486 to FIFO. Element nr    0
+Writing 1c89 to FIFO. Element nr    1
+Writing 90a3 to FIFO. Element nr    2
+Writing cc44 to FIFO. Element nr    3
+Writing 2ae9 to FIFO. Element nr    4
+Writing ceba to FIFO. Element nr    5
+Writing 8c9a to FIFO. Element nr    6
+Writing feb6 to FIFO. Element nr    7
+Writing 83cc to FIFO. Element nr    8
+Writing 7010 to FIFO. Element nr    9
+Reading b486 from FIFO. Element nr    0. Was: b486
+Reading 1c89 from FIFO. Element nr    1. Was: 1c89
+Reading 90a3 from FIFO. Element nr    2. Was: 90a3
+Reading cc44 from FIFO. Element nr    3. Was: cc44
+Reading 2ae9 from FIFO. Element nr    4. Was: 2ae9
+Reading ceba from FIFO. Element nr    5. Was: ceba
+Reading 8c9a from FIFO. Element nr    6. Was: 8c9a
+Reading feb6 from FIFO. Element nr    7. Was: feb6
+Reading 83cc from FIFO. Element nr    8. Was: 83cc
+Reading 7010 from FIFO. Element nr    9. Was: 7010
+#################################################################### Test PASSED!!! ####################################################################
+$finish called at time : 24000001 ps : File "C:/Users/kacpe/OneDrive/Pulpit/Projekt_SDUP/Projekt_SDUP.srcs/sources_1/new/tb.v" Line 79
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 864.746 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/tb/design_1_wrapper/design_1_i/AXI_FIFO_0}} 
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+WARNING: [Wavedata 42-572] Protocol instance "/tb/design_1_wrapper/design_1_i/AXI_FIFO_0/iAXI" is non-functional for the following reason(s):
+Port "TUSER" must be a logic vector
+
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 28 04:48:27 2022...
